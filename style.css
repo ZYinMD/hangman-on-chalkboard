@@ -1,0 +1,78 @@
+html {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Special Elite', cursive;
+}
+
+body {
+  text-align: center;
+  max-width: 600px margin:auto;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#keypad a {
+  font-size: 2.7em;
+  margin: .1em;
+  cursor: pointer;
+}
+
+#keypad--row3 {
+  position: relative;
+  right: 1em;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#guessing {
+
+  font-size: 2.7em;
+  margin: .1em;
+  margin-bottom: .5em;
+}
+
+#keypad .correct-letter {
+  color: #39ca20;
+  cursor: no-drop;
+}
+
+#keypad .incorrect-letter {
+  color: red;
+  cursor: no-drop;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+h1.hanged {
+  color: red;
+}
+
+h1.escaped {
+  color: #39ca20;
+}
+
+#keypad.escaped a {
+  cursor: no-drop;
+}
+
+span {
+  font-size: 1.5rem;
+  visibility: hidden;
+}
+
+#wins,
+#losses {
+  margin-right: 1rem
+}
+
+.visible {
+  visibility: visible;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hangman!!</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+
+</head>
+
+<body>
+  <h1>Hangman</h1>
+  <h4>The game currently has serious bugs, I'll fix tonight. If you grade it after Wednesday night, you won't see this sentence.</h4>
+
+
+  <svg width="380" height="270">
+    <line class="gallows" y2="9" x2="290" y1="9" x1="65" stroke-width="1.5" stroke="black" fill="none" />
+    <line class="gallows" y2="9" x2="90" y1="250" x1="90" stroke-width="1.5" stroke="black" fill="none" />
+    <line class="gallows" y2="40" x2="90" y1="9" x1="120" stroke-width="1.5" stroke="black" fill="none" />
+    <ellipse id="head" ry="25" rx="25" cy="67" cx="190" stroke-width="1.5" stroke="black" fill="none" />
+    <line id="body" y2="100" x2="190" y1="150" x1="190" stroke-width="1.5" stroke="black" fill="none" />
+    <line id="left-arm" y2="75" x2="130" y1="120" x1="170" stroke-width="1.5" stroke="black" fill="none" />
+    <line id="right-arm" y2="75" x2="250" y1="120" x1="200" stroke-width="1.5" stroke="black" fill="none" />
+    <line id="left-leg" y2="230" x2="150" y1="160" x1="180" stroke-width="1.5" stroke="black" fill="none" />
+    <line id="right-leg" y2="160" x2="200" y1="230" x1="250" stroke-width="1.5" stroke="black" fill="none" />
+  </svg>
+
+  <div id="guessing"></div>
+  <div id="keypad">
+    <div id=keypad--row1></div>
+    <div id=keypad--row2></div>
+    <div id=keypad--row3></div>
+  </div>
+
+  <h2>New Game</h2>
+  <div id="tally">
+    <span class="wins">Wins: </span><span class="wins" id="wins"></span>
+    <span class="losses">Losses:  </span><span class="losses" id="losses"></span>
+    <span class="abortions">Abortions:  </span><span class="abortions" id="abortions"></span>
+  </div>
+
+</body>
+<script src="common-words.js"></script>
+<script src="script.js"></script>
+
+</html>

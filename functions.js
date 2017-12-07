@@ -112,7 +112,6 @@ function escaped() { //won
   gameInProcess = false;
   masthead.innerText = "You escaped!!";
   masthead.setAttribute("status", "escaped");
-  console.log("i'm about to win!");
   wins++;
   removeAllListeners();
   unhideAll(".wins");

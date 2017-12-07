@@ -1,5 +1,4 @@
 //The code below is in vanilla JavaScript.
-
 function initialize() {
   wins = 0;
   losses = 0;

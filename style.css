@@ -1,7 +1,7 @@
 html {
-  text-align: center;
+  /*text-align: center;*/
   font-size: 16px;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 body {
@@ -10,7 +10,14 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
+  font-weight: 100;
+}
+
+h2 {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 100;
 }
 
 #keypad a {
@@ -19,60 +26,54 @@ h1 {
   cursor: pointer;
 }
 
-#keypad--row3 {
-  position: relative;
-  right: 1em;
-  margin-bottom: 3rem;
-}
-
-h2 {
-  text-decoration: underline;
-  cursor: pointer;
+#keypad a.finished {
+  /*reset pointer after the game is over to prevent further clicking*/
+  cursor: default;
 }
 
 #guessing {
-
   font-size: 2.7em;
   margin: .1em;
   margin-bottom: .5em;
 }
 
-#keypad .correct-letter {
+#keypad .correct-letter { /*letters which belong to the word*/
   color: #39ca20;
   cursor: no-drop;
 }
 
-#keypad .incorrect-letter {
+#keypad .incorrect-letter { /*letters which don't belong to the word*/
   color: red;
   cursor: no-drop;
 }
 
 .hidden {
-  visibility: hidden;
+  /*visibility: hidden;*/
+  display: none;
 }
 
-h1.hanged {
+[status="hanged"] { /*a status of the masthead*/
   color: red;
 }
 
-h1.escaped {
+[status="escaped"] { /*a status of the masthead*/
   color: #39ca20;
-}
-
-#keypad.escaped a {
-  cursor: no-drop;
 }
 
 span {
   font-size: 1.5rem;
-  visibility: hidden;
 }
 
 #wins,
 #losses {
-  margin-right: 1rem
+  margin-right: 1.5rem
 }
 
-.visible {
-  visibility: visible;
+a:hover {
+  color: gray;
+}
+
+a:active { /*when buttons are pressed down*/
+  position: relative;
+  top: 2px;
 }

@@ -3,15 +3,15 @@ html {
 }
 
 body {
-  height: 666px; /*the game's maxiumum height needed is 700px*/
+  height: 666px; /*the game's maxiumum height needed is 666px and 32 padding*/
   width: 390px; /*Masthead is 387 px when it's the widest*/
-  background-color: #23462d;
   color: #cacaca;
   font-size: 16px;
   /*set the font size so rem and em can be used throughout*/
   font-family: 'Cabin Sketch', cursive;
   text-align: center;
   margin: auto;
+  padding:  1.3rem 0 0.7rem 0;
   display: inline-block;
   /*transform: scale(?);*/ /*this value will be set by the script*/
   transform-origin: top;  /*to use together with the line above*/

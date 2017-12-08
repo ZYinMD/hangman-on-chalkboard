@@ -1,18 +1,23 @@
+
 html {
-  /*text-align: center;*/
-  font-size: 16px;
-  font-family: 'Cabin Sketch', cursive;
+  text-align: center; /*set this, and body's margin auto, inline-block, center the body*/
 }
 
 body {
+  font-size: 16px; /*set the font size so rem and em can be used throughout*/
+  font-family: 'Cabin Sketch', cursive;
   text-align: center;
-  max-width: 600px margin:auto;
+  margin:auto;
+  display: inline-block;
+  /*transform: scale(1.5);*/ /*this value will be changed by the script*/
+  transform-origin: top; /*to use together with the line above*/
+  padding: 1rem 0;
 }
 
 h1 {
   font-size: 3.5em;
   font-weight: 100;
-  margin: .5em;
+  margin: 0 0 .5rem 0;
 }
 
 h2 {

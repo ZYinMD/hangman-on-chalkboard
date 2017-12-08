@@ -1,4 +1,11 @@
 //The code below is in vanilla JavaScript.
+function fitViewPort() {
+  widthRatio = window.innerWidth / 390; //the game's maximum possible width is 390px
+  heightRatio = window.innerHeight / 705; //the game's maximum possible height is 455px
+  enlargeThisMuch = Math.min(widthRatio, heightRatio);
+  document.querySelector("body").style.transform = "scale(" + enlargeThisMuch + ")";
+}
+
 function initialize() {
   wins = 0;
   losses = 0;

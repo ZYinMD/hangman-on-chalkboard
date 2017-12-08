@@ -8,7 +8,7 @@ body {
   color: #cacaca;
   font-size: 16px;
   /*set the font size so rem and em can be used throughout*/
-  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Cabin Sketch', "Arial";
   text-align: center;
   margin: auto;
   padding:  1.3rem 0 0.7rem 0;

@@ -19,7 +19,7 @@ function fitViewport() {
   widthRatio = viewportWidth / bodyWidth;
   heightRatio = viewportHeight / bodyHeight;
   scaleRatio = Math.min(widthRatio, heightRatio);
-  document.querySelector("body").style.transform = "scale(" + scaleRatio + ")";
+  body.style.transform = "scale(" + scaleRatio + ")";
 }
 
 function initialize() {

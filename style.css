@@ -1,12 +1,10 @@
 html {
-  text-align: center;
-  /*set this, and body's margin auto, inline-block, center the body*/
+  text-align: center;  /*set this, and body's margin auto, inline-block, center the body*/
 }
 
 body {
-  box-sizing: border-box;
-  height: 700px;
-  /*the game's maxiumum height needed is 700px*/
+  height: 666px; /*the game's maxiumum height needed is 700px*/
+  width: 390px; /*Masthead is 387 px when it's the widest*/
   background-color: #23462d;
   color: #cacaca;
   font-size: 16px;
@@ -15,10 +13,8 @@ body {
   text-align: center;
   margin: auto;
   display: inline-block;
-  /*transform: scale(?);*/
-  /*this value will be set by the script*/
-  transform-origin: top;
-  /*to use together with the line above*/
+  /*transform: scale(?);*/ /*this value will be set by the script*/
+  transform-origin: top;  /*to use together with the line above*/
 }
 
 h1 {
@@ -41,8 +37,7 @@ h2 {
   cursor: pointer;
 }
 
-#keypad a.finished {
-  /*reset pointer after the game is over to prevent further clicking*/
+#keypad a.finished {  /*reset pointer after the game is over to prevent further clicking*/
   cursor: default;
 }
 
@@ -51,30 +46,25 @@ h2 {
   margin: 0.4em auto;
 }
 
-#keypad .correct-letter {
-  /*letters which belong to the word*/
+#keypad .correct-letter {   /*letters which belong to the word*/
   color: #89d47b;
   cursor: no-drop;
 }
 
-#keypad .incorrect-letter {
-  /*letters which don't belong to the word*/
+#keypad .incorrect-letter {  /*letters which don't belong to the word*/
   color: #f57b7b;
   cursor: no-drop;
 }
 
-.hidden {
-  /*visibility: hidden;*/
+.hidden {  /*visibility: hidden;*/
   display: none;
 }
 
-[status="escaped"] {
-  /*a status of the masthead*/
+[status="escaped"] {  /*a status of the masthead*/
   color: #89d47b;
 }
 
-[status="hanged"] {
-  /*a status of the masthead*/
+[status="hanged"] {  /*a status of the masthead*/
   color: #f57b7b;
 }
 
@@ -92,8 +82,7 @@ a:hover {
   color: white;
 }
 
-a:active {
-  /*when buttons are pressed down*/
+a:active {  /*when buttons are being pressed down*/
   position: relative;
   top: 2px;
 }

@@ -4,6 +4,6 @@ My very first time writing JavaScript. Conceived and typed from scratch, no look
 
 Auto fits to any screen sizes.
 
-Written in vanilla JavaScript. Before I learned jQuery.
+Written in vanilla JavaScript, before I learned jQuery.
 
 Hosted at: https://DrZYin.github.io/hangman-homework/

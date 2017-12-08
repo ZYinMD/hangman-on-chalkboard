@@ -37,7 +37,7 @@ h2 {
 
 #keypad a {
   font-size: 2.7em;
-  margin: .1em;
+  margin: .1em .13em;
   cursor: pointer;
 }
 
@@ -53,13 +53,13 @@ h2 {
 
 #keypad .correct-letter {
   /*letters which belong to the word*/
-  color: #7ae867;
+  color: #78d867;
   cursor: no-drop;
 }
 
 #keypad .incorrect-letter {
   /*letters which don't belong to the word*/
-  color: #ff6c6c;
+  color: #f57b7b;
   cursor: no-drop;
 }
 
@@ -70,12 +70,12 @@ h2 {
 
 [status="escaped"] {
   /*a status of the masthead*/
-  color: #7ae867;
+  color: #78d867;
 }
 
 [status="hanged"] {
   /*a status of the masthead*/
-  color: #ff6c6c;
+  color: #f57b7b;
 }
 
 
@@ -89,7 +89,7 @@ span {
 }
 
 a:hover {
-  color: gray;
+  color: white;
 }
 
 a:active {

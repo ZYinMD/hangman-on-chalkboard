@@ -37,7 +37,7 @@ h2 {
 
 #keypad a {
   font-size: 2.7em;
-  margin: .1em .13em;
+  padding: .1em .13em;
   cursor: pointer;
 }
 
@@ -53,7 +53,7 @@ h2 {
 
 #keypad .correct-letter {
   /*letters which belong to the word*/
-  color: #78d867;
+  color: #89d47b;
   cursor: no-drop;
 }
 
@@ -70,7 +70,7 @@ h2 {
 
 [status="escaped"] {
   /*a status of the masthead*/
-  color: #78d867;
+  color: #89d47b;
 }
 
 [status="hanged"] {

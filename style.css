@@ -1,23 +1,30 @@
-
 html {
-  text-align: center; /*set this, and body's margin auto, inline-block, center the body*/
+  text-align: center;
+  /*set this, and body's margin auto, inline-block, center the body*/
 }
 
 body {
-  font-size: 16px; /*set the font size so rem and em can be used throughout*/
+  box-sizing: border-box;
+  height: 700px;
+  /*the game's maxiumum height needed is 700px*/
+  background-color: #23462d;
+  color: #cacaca;
+  font-size: 16px;
+  /*set the font size so rem and em can be used throughout*/
   font-family: 'Cabin Sketch', cursive;
   text-align: center;
-  margin:auto;
+  margin: auto;
   display: inline-block;
-  /*transform: scale(1.5);*/ /*this value will be changed by the script*/
-  transform-origin: top; /*to use together with the line above*/
-  padding: 1rem 0;
+  /*transform: scale(?);*/
+  /*this value will be set by the script*/
+  transform-origin: top;
+  /*to use together with the line above*/
 }
 
 h1 {
   font-size: 3.5em;
   font-weight: 100;
-  margin: 0 0 .5rem 0;
+  margin: 0 0 1rem 0;
 }
 
 h2 {
@@ -41,17 +48,18 @@ h2 {
 
 #guessing {
   font-size: 2.7em;
-  margin: .1em;
-  margin-bottom: .5em;
+  margin: 0.4em auto;
 }
 
-#keypad .correct-letter { /*letters which belong to the word*/
-  color: #39ca20;
+#keypad .correct-letter {
+  /*letters which belong to the word*/
+  color: #7ae867;
   cursor: no-drop;
 }
 
-#keypad .incorrect-letter { /*letters which don't belong to the word*/
-  color: red;
+#keypad .incorrect-letter {
+  /*letters which don't belong to the word*/
+  color: #ff6c6c;
   cursor: no-drop;
 }
 
@@ -60,13 +68,16 @@ h2 {
   display: none;
 }
 
-[status="hanged"] { /*a status of the masthead*/
-  color: red;
+[status="escaped"] {
+  /*a status of the masthead*/
+  color: #7ae867;
 }
 
-[status="escaped"] { /*a status of the masthead*/
-  color: #39ca20;
+[status="hanged"] {
+  /*a status of the masthead*/
+  color: #ff6c6c;
 }
+
 
 span {
   font-size: 1.5rem;
@@ -81,7 +92,8 @@ a:hover {
   color: gray;
 }
 
-a:active { /*when buttons are pressed down*/
+a:active {
+  /*when buttons are pressed down*/
   position: relative;
   top: 2px;
 }

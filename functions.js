@@ -1,9 +1,25 @@
 //The code below is in vanilla JavaScript.
+
 function fitViewPort() {
-  widthRatio = window.innerWidth / 390; //the game's maximum possible width is 390px
-  heightRatio = window.innerHeight / 705; //the game's maximum possible height is 455px
-  enlargeThisMuch = Math.min(widthRatio, heightRatio);
-  document.querySelector("body").style.transform = "scale(" + enlargeThisMuch + ")";
+  body = document.querySelector("body");
+  viewportWidth = window.innerWidth; //window.innerWidth actually count in the scroll bar, but it's intended.
+  viewportHeight = window.innerHeight
+    //if landscape, leave some white color on both sides
+  if (viewportHeight < viewportWidth) {
+    body.style.padding = "1.3rem 7rem 0.7rem 7rem";
+    document.querySelector("html").style.backgroundColor = "white";
+  } else {
+    //if portrait, set a universal background color
+    body.style.padding = "1.3rem 0 0.7rem 0";
+    document.querySelector("html").style.backgroundColor = "#23462d";
+  }
+  //enlarge the body to fit the viewport
+  bodyWidth = body.offsetWidth;
+  bodyHeight = body.offsetHeight;
+  widthRatio = viewportWidth / bodyWidth;
+  heightRatio = viewportHeight / bodyHeight;
+  scaleRatio = Math.min(widthRatio, heightRatio);
+  document.querySelector("body").style.transform = "scale(" + scaleRatio + ")";
 }
 
 function initialize() {

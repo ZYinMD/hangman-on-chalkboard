@@ -1,4 +1,4 @@
-fitViewPort();
-window.addEventListener("resize", fitViewPort);
+fitViewport();
+window.addEventListener("resize", fitViewport);
 initialize();
 

@@ -1,6 +1,6 @@
 //The code below is in vanilla JavaScript.
 
-function fitViewPort() {
+function fitViewport() {
   body = document.querySelector("body");
   viewportWidth = window.innerWidth; //window.innerWidth actually count in the scroll bar, but it's intended.
   viewportHeight = window.innerHeight

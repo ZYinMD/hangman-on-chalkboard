@@ -2,8 +2,8 @@
 
 function fitViewport() {
   body = document.querySelector("body");
-  viewportWidth = window.innerWidth; //window.innerWidth actually count in the scroll bar, but it's intended.
-  viewportHeight = window.innerHeight
+  viewportWidth = document.documentElement.clientWidth;
+  viewportHeight = document.documentElement.clientHeight;
     //if landscape, leave some white color on both sides
   if (viewportHeight < viewportWidth) {
     body.style.padding = "1.3rem 7rem 0.7rem 7rem";

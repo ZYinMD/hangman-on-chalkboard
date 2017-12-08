@@ -4,7 +4,7 @@ html {
 
 body {
   height: 666px; /*the game's maxiumum height needed is 700px*/
-  width: 390px; /*Masthead is 387 px when it's the widest*/
+  /*width: 390px; Masthead is 387 px when it's the widest*/
   background-color: #23462d;
   color: #cacaca;
   font-size: 16px;

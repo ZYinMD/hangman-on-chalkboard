@@ -1,13 +1,4 @@
-//The code below is in vanilla JavaScript.
-function fitViewport() {
-  detectViewport();
-  //enlarge the body to fit the viewport
-  widthRatio = viewportWidth / bodyWidth;
-  heightRatio = viewportHeight / bodyHeight;
-  scaleRatio = Math.min(widthRatio, heightRatio);
-  body.style.transform = "scale(" + scaleRatio + ")";
-}
-
+//The code in this file is in vanilla JavaScript.
 function initialize() {
   wins = 0;
   losses = 0;
@@ -22,6 +13,15 @@ function initialize() {
   bodyHeight = body.offsetHeight;
   detectViewport();
   document.querySelector("#new-game").addEventListener("click", newGame);
+}
+
+function fitViewport() {
+  detectViewport();
+  //enlarge the body to fit the viewport
+  widthRatio = viewportWidth / bodyWidth;
+  heightRatio = viewportHeight / bodyHeight;
+  scaleRatio = Math.min(widthRatio, heightRatio);
+  body.style.transform = "scale(" + scaleRatio + ")";
 }
 
 function detectViewport() {
@@ -55,10 +55,14 @@ function newGame() {
   resetKeypad();
   maskedAnswer = []; //maskedAnswer is the mixture of letters and underscores
   for (i of answer) {
-    maskedAnswer.push("_")
+    maskedAnswer.push("_");
   }
   updateDisplayWord(); //display the maskedAnswer
   hang(); //draw graph
+}
+
+function newRandomWord() {
+  return commonWords[Math.floor(Math.random() * commonWords.length)];
 }
 
 function verifyGuess() { //the onclick event
@@ -88,7 +92,7 @@ function verifyGuess() { //the onclick event
 }
 
 function updateDisplayWord() {
-  display = "";
+  var display = "";
   for (i of maskedAnswer) {
     display += i + " ";
   }
@@ -103,25 +107,37 @@ function aborted() { //add 1 to the tally Abortions
 }
 
 function hang() { //draw the hangman
-  if (wrongGuesses == 0) {
-    hideAll("svg *");
-  } else if (wrongGuesses == 1) {
-    unhideAll(".gallows");
-  } else if (wrongGuesses == 2) {
-    unhide("#head");
-  } else if (wrongGuesses == 3) {
-    unhide("#body");
-  } else if (wrongGuesses == 4) {
-    unhide("#left-arm");
-  } else if (wrongGuesses == 5) {
-    unhide("#right-arm");
-  } else if (wrongGuesses == 6) {
-    unhide("#left-leg");
-  } else if (wrongGuesses >= 7) {
-    unhide("#right-leg");
-    hanged();
+  switch (wrongGuesses) {
+    case 0:
+      hideAll("svg *");
+      break;
+    case 1:
+      unhideAll(".gallows");
+      break;
+    case 2:
+      unhide("#head");
+      break;
+    case 3:
+      unhide("#body");
+      break;
+    case 4:
+      unhide("#left-arm");
+      break;
+    case 5:
+      unhide("#right-arm");
+      break;
+    case 6:
+      unhide("#left-leg");
+      break;
+    case 7:
+      unhide("#right-leg");
+      hanged();
+      break;
+    default:
+      newGame;
   }
 }
+
 
 function hanged() { //lost
   gameInProcess = false;
@@ -131,8 +147,8 @@ function hanged() { //lost
   removeAllListeners();
   unhideAll(".losses");
   document.querySelector("#losses").innerText = losses;
-  // show correct answer;
-  var display = ""
+  // show correct answer
+  var display = "";
   for (var i of answer) {
     display += i + " ";
   }
@@ -155,10 +171,6 @@ function removeAllListeners() { //prevent user from continue clicking after game
     i.removeEventListener("click", verifyGuess);
     i.classList.toggle("finished", true);
   }
-}
-
-function newRandomWord() {
-  return commonWords[Math.floor(Math.random() * commonWords.length)];
 }
 
 function resetKeypad() {
@@ -190,12 +202,12 @@ function unhide(targetElement) {
 
 function hideAll(targetElements) {
   for (i of document.querySelectorAll(targetElements)) {
-    i.classList.toggle("hidden", true)
+    i.classList.toggle("hidden", true);
   }
 }
 
 function unhideAll(targetElements) {
   for (i of document.querySelectorAll(targetElements)) {
-    i.classList.toggle("hidden", false)
+    i.classList.toggle("hidden", false);
   }
 }

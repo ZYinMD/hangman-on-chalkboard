@@ -6,4 +6,4 @@
 
 - Written in vanilla JavaScript, before I knew jQuery.
 
-- Hosted at: https://DrZYin.github.io/hangman-homework/
+Hosted at: https://DrZYin.github.io/hangman-homework/

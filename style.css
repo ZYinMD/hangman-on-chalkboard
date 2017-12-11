@@ -1,5 +1,5 @@
 html {
-  text-align: center;  /*set this, and body's margin auto, inline-block, center the body*/
+  text-align: center;  set this, and body's margin auto, inline-block, center the body
 }
 
 body {
@@ -10,7 +10,7 @@ body {
   /*set the font size so rem and em can be used throughout*/
   font-family: 'Cabin Sketch', "Arial";
   text-align: center;
-  margin: auto;
+  margin: 0;
   padding:  1.3rem 0 0.7rem 0;
   display: inline-block;
   /*transform: scale(?);*/ /*this value will be set by the script*/

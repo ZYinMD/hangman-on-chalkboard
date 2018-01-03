@@ -54,7 +54,7 @@ function newGame() {
   wrongGuesses = 0;
   resetKeypad();
   maskedAnswer = []; //maskedAnswer is the mixture of letters and underscores
-  for (i of answer) {
+  for (var i of answer) {
     maskedAnswer.push("_");
   }
   updateDisplayWord(); //display the maskedAnswer
@@ -70,7 +70,7 @@ function verifyGuess() { //the onclick event
   //when it's a match:
   if (answer.toLowerCase().includes(guessedLetter)) {
     //update the displayed word
-    for (i in maskedAnswer) {
+    for (var i in maskedAnswer) {
       if (answer[i] == guessedLetter) {
         maskedAnswer[i] = answer[i];
       }
@@ -93,7 +93,7 @@ function verifyGuess() { //the onclick event
 
 function updateDisplayWord() {
   var display = "";
-  for (i of maskedAnswer) {
+  for (var i of maskedAnswer) {
     display += i + " ";
   }
   display.slice(0, -1);
@@ -134,7 +134,7 @@ function hang() { //draw the hangman
       hanged();
       break;
     default:
-      newGame;
+      newGame();
   }
 }
 
@@ -167,14 +167,14 @@ function escaped() { //won
 }
 
 function removeAllListeners() { //prevent user from continue clicking after game's over
-  for (i of document.querySelectorAll("#keypad a")) {
+  for (var i of document.querySelectorAll("#keypad a")) {
     i.removeEventListener("click", verifyGuess);
     i.classList.toggle("finished", true);
   }
 }
 
 function resetKeypad() {
-  for (i of document.querySelectorAll("#keypad div")) { //clear the keypad
+  for (var i of document.querySelectorAll("#keypad div")) { //clear the keypad
     i.innerText = "";
   }
   populateRow(1, "QWERTYUIOP");
@@ -183,14 +183,14 @@ function resetKeypad() {
 }
 
 function populateRow(rowNumber, rowLetters) { //draw the keyboard and attach listeners
-  for (i of rowLetters) {
+  for (var i of rowLetters) {
     key = document.createElement("a");
     key.id = i.toLowerCase();
     key.append(i);
     key.addEventListener("click", verifyGuess);
     document.querySelector("#keypad--row" + rowNumber).append(key);
   }
-};
+}
 
 function hide(targetElement) {
   document.querySelector(targetElement).classList.toggle("hidden", true);
@@ -201,13 +201,13 @@ function unhide(targetElement) {
 }
 
 function hideAll(targetElements) {
-  for (i of document.querySelectorAll(targetElements)) {
+  for (var i of document.querySelectorAll(targetElements)) {
     i.classList.toggle("hidden", true);
   }
 }
 
 function unhideAll(targetElements) {
-  for (i of document.querySelectorAll(targetElements)) {
+  for (var i of document.querySelectorAll(targetElements)) {
     i.classList.toggle("hidden", false);
   }
 }

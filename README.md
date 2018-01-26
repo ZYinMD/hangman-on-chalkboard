@@ -1,6 +1,6 @@
 # The Hangman Homework
 
-Hosted at: https://ZYinMD.github.io/Hangman/
+Hosted at: https://ZYinMD.github.io/hangman/
 
 - My very first time coding JavaScript. Conceived and typed from scratch, no looking at other's work.
 

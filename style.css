@@ -6,8 +6,7 @@ body {
   height: 666px; /*the game's maxiumum height needed is 666px and 32 padding*/
   width: 390px; /*Masthead is 387 px when it's the widest*/
   color: #cacaca;
-  font-size: 16px;
-  /*set the font size so rem and em can be used throughout*/
+  font-size: 16px;  /*set the font size so rem and em can be used throughout*/
   font-family: 'Cabin Sketch', "Arial";
   text-align: center;
   margin: 0; /*margin auto is a inferior way to center the content comparing with the current setup*/

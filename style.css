@@ -1,38 +1,60 @@
 html {
   text-align: center;  /*set this with the body inline-block to center the body*/
+  background-color: white;
+  font-size: 1vh;  /*set root font size, and then use rem throughout the file*/
+}
+
+@media (max-width: 66vh) { /*portrait screen*/
+  html {
+    font-size: 1.5vw;
+  }
 }
 
 body {
-  height: 666px; /*the game's maxiumum height needed is 666px and 32 padding*/
-  width: 390px; /*Masthead is 387 px when it's the widest*/
+  background-color: #23462d;
   color: #cacaca;
-  font-size: 16px;  /*set the font size so rem and em can be used throughout*/
   font-family: 'Cabin Sketch', "Arial";
   text-align: center;
   margin: 0; /*margin auto is a inferior way to center the content comparing with the current setup*/
-  padding:  1.3rem 0 0.7rem 0;
   display: inline-block;
-  /*transform: scale(?);*/ /*this value will be set by the script*/
-  transform-origin: top;  /*to use together with the line above*/
+  box-sizing: border-box;
+  height: 100vh;
+  width:75vh;
+}
+
+@media (max-width: 100vh) { /*portrait screen*/
+  body {
+    width: 100vw;
+  }
+}
+
+svg {
+height: 36vh;
+}
+
+@media (max-width: 66vh) { /*portrait screen*/
+  svg {
+  height: 54vw;
+  }
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 8.4rem;
   font-weight: 100;
-  margin: 0 0 1rem 0;
+  margin: 2.5rem 0;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 4.5rem;
   text-decoration: underline;
   cursor: pointer;
   font-weight: 100;
-  margin: .4em;
+  margin: 1.7rem;
 }
 
 #keypad a {
-  font-size: 2.7em;
-  padding: .1em .13em;
+  font-size: 6.5rem;
+  padding: .3rem 0.8rem;
   cursor: pointer;
 }
 
@@ -41,8 +63,8 @@ h2 {
 }
 
 #guessing {
-  font-size: 2.7em;
-  margin: 0.4em auto;
+  font-size: 6.2rem;
+  margin: 2.4rem auto;
 }
 
 #keypad .correct-letter {   /*letters which belong to the word*/
@@ -69,12 +91,12 @@ h2 {
 
 
 span {
-  font-size: 1.5rem;
+  font-size: 3.3rem;
 }
 
 #wins,
 #losses {
-  margin-right: 1.5rem
+  margin-right: 4rem
 }
 
 a:hover {

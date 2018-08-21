@@ -3,8 +3,6 @@ commonWords = ["their", "would", "about", "there", "think", "which", "people", "
 
 var isLandscape;
 initialize();
-fitViewport();
-window.addEventListener("resize", fitViewport);
 
 function initialize() {
   wins = 0;
@@ -14,39 +12,7 @@ function initialize() {
   hideAll("#tally span");
   masthead = document.querySelector("h1");
   body = document.querySelector("body");
-  bodyBackgroundColor = "#23462d";
-  body.style.backgroundColor = bodyBackgroundColor; //it's used across multiple places, so set here as opposed to stylesheet
-  bodyWidth = body.offsetWidth; //detect the width and height of body, which are the initial values set in stylesheet
-  bodyHeight = body.offsetHeight;
-  detectViewport();
   document.querySelector("#new-game").addEventListener("click", newGame);
-}
-
-function fitViewport() {
-  detectViewport();
-  //enlarge the body to fit the viewport
-  widthRatio = viewportWidth / bodyWidth;
-  heightRatio = viewportHeight / bodyHeight;
-  scaleRatio = Math.min(widthRatio, heightRatio);
-  body.style.transform = "scale(" + scaleRatio + ")";
-}
-
-function detectViewport() {
-  viewportHeight = document.documentElement.clientHeight; // first tried window.innerHeight, seemed buggy
-  viewportWidth = document.documentElement.clientWidth;
-  //if isLandscape is undefined, or is wrong(user changed it), make it right, then make changes accordingly
-  if (isLandscape != viewportHeight < viewportWidth) {
-    isLandscape = viewportHeight < viewportWidth;
-    if (isLandscape) {
-      //if landscape, leave some white color on both sides
-      body.style.padding = "1.3rem 7rem 0.7rem 7rem";
-      document.querySelector("html").style.backgroundColor = "white";
-    } else {
-      //if portrait, set a universal background color
-      body.style.padding = "1.3rem 0 0.7rem 0";
-      document.querySelector("html").style.backgroundColor = bodyBackgroundColor;
-    }
-  }
 }
 
 function newGame() {

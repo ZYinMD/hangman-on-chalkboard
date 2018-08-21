@@ -1,5 +1,5 @@
-# The Hangman Homework
+# Hangman On Chalkboard
 
-- It's the repo of a Codepen of mine: https://codepen.io/ZYinMD/pen/gdOGKP/
+- I was a Codepen of mine: https://codepen.io/ZYinMD/pen/gdOGKP/
 
 - Responsive vertically and horizontally

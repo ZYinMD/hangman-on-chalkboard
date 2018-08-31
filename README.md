@@ -1,9 +1,9 @@
 # Hangman On Chalkboard
 
-- I was a Codepen of mine: https://codepen.io/ZYinMD/pen/gdOGKP/
+-It was a Codepen of mine: https://codepen.io/ZYinMD/pen/gdOGKP/
 
-- Responsive vertically and horizontally
+-Responsive vertically and horizontally
 
-Demo:
+-Demo:
 
-[![Youtube Link](https://s19.postimg.cc/xgpw563ir/thumbnail_-_Hangman_on_Chalkboard.png)](https://youtu.be/Xe8ZgbvHiiI)
+[![Youtube Link](https://s19.postimg.cc/tfdecwl2r/thumbnail_-_Hangman_on_Chalkboard_1.png)](https://youtu.be/Xe8ZgbvHiiI)

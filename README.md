@@ -4,6 +4,6 @@
 
 -Responsive vertically and horizontally
 
--Demo(1m48s):
+-Demo(1m47s):
 
 [![Youtube Link](https://s19.postimg.cc/tfdecwl2r/thumbnail_-_Hangman_on_Chalkboard_1.png)](https://youtu.be/Xe8ZgbvHiiI)

@@ -115,3 +115,9 @@ a:active {  /*when buttons are being pressed down*/
   position: relative;
   top: 2px;
 }
+
+svg {
+  stroke: #cacaca;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+}
